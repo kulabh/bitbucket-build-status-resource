@@ -3,14 +3,16 @@ FROM alpine:latest
 MAINTAINER Patrick Pokatilo <docker-hub@shyxormz.net>
 
 ENV LANG C
-RUN if [ `uname -m` = "aarch64" ] ; then \
-       apk add py3-pip && \
-       apk add python3-dev; \
-    fi
+#RUN if [ `uname -m` = "aarch64" ] ; then \
+ #      apk add py3-pip && \
+  #     apk add python3-dev; \
+   # fi
 RUN apk update --no-progress && \
     apk add --no-cache --no-progress \
         bash \
         python3 \
+        py3-pip \
+        python3-dev \
         git \
         mercurial && \
     pip3 install --upgrade pip && \
