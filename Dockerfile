@@ -15,7 +15,7 @@ RUN apk update --no-progress && \
         git \
         mercurial && \
     if [ `uname -m` = "aarch64" ] ; then \
-       apk add py3-pip;  \  
+       apk add py3-pip; \  
     fi   
     pip3 install --upgrade pip && \
     pip3 install 'requests>=2.8.1'
