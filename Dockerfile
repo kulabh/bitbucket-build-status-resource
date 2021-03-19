@@ -15,6 +15,7 @@ RUN apk update --no-progress && \
         git \
         mercurial && \
     if [ `uname -m` = "aarch64" ] ; then \
+       apk add --no-cache --no-progress \
        apk add py3-pip; \  
     fi && \ 
     pip3 install --upgrade pip && \
