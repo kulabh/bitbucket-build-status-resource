@@ -12,7 +12,6 @@ RUN apk update --no-progress && \
         bash \
         python3 \
         py3-pip \
-        python3-dev \
         git \
         mercurial && \
     pip3 install --upgrade pip && \
